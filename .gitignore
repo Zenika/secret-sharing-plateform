@@ -1,0 +1,6 @@
+# For IntelliJ and VsCode
+
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+.idea/
