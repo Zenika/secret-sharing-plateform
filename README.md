@@ -9,7 +9,7 @@ This is a Proof Of Concept on a secret sharing web app for Zenika collaborator a
  - User-friendly secret sharing for all collaborators
  - For technical projects (API keys, env. configurations,...) and non-technical people
  - Web UI to share secrets with users and groups
- - Esay access to the secrets list
+ - Easy access to the personal secrets list
  - Admin panel for logging on user actions and secrets revocation, without secrecy breach
 
 ## How to run
