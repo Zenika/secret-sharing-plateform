@@ -30,6 +30,27 @@ export VAULT_ADDR='http://127.0.0.1:8200'
 vault status
 ```
 
+Then write the policies to ensure token creation capabilities:
+
+```
+vault policy write admin-policy admin-policy.hcl
+vault policy write provisioner-policy provisioner-policy.hcl
+vault policy write manager manager.hcl
+vault policy write reader reader.hcl
+vault policy list
+```
+
+You need to add environment variables for Auth0 authentication:
+
+```
+export AUTH0_DOMAIN=zenika.eu.auth0.com
+export AUTH0_CLIENT_ID=<insert client id>
+export AUTH0_CLIENT_SECRET=<insert client secret>
+```
+
+_You can find id and secret on the Auth0 dashboard in secret-sharing-plateform-POC app or ask Dreamlab_
+
+
 ## Steps to validate POC
 
  - [ ] Acitvate OIDC authentication method
