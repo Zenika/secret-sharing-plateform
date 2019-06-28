@@ -50,7 +50,8 @@ export AUTH0_CLIENT_SECRET=<insert client secret>
 
 _You can find id and secret on the Auth0 dashboard in secret-sharing-plateform-POC app or ask Dreamlab_
 
-Run the `enable-oidc.sh` script to enable auth and create role
+Run the `enable-oidc.sh` script to enable auth and create role.
+
 The server should accept your request for authentication via oicd method via CLI or UI
 
 ```
@@ -61,7 +62,7 @@ or visit http://localhost:8200/ and chose OIDC in Method dropdown menu
 
 ## Steps to validate POC
 
- - [ ] Acitvate OIDC authentication method
+ - [X] Acitvate OIDC authentication method
  - [ ] Create two Users with personal secret store space
  - [ ] Edit a policy to grant access to another user to personal space
  - [ ] Validate the listing of user actions and secrets 
