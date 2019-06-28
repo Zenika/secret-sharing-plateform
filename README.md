@@ -13,6 +13,28 @@ This is a Proof Of Concept on a secret sharing web app for Zenika collaborator a
  - Easy access to the personal secrets list
  - Admin panel for logging on user actions and secrets revocation, without secrecy breach
 
-## How to run
+## Steps to run the project:
+
+First, get the relevant package for your architecture and add the binary to your PATH: https://www.vaultproject.io/downloads.html
+
+Verify the install by running the `vault` command, it should display usage
+
+_You can run the_ `vault -autocomplete-install` _and restart your terminal to have autocompletion on commands_
+
+You can then launch the vault server, add the address to your path and check the status:
+
+`vault server -dev` _launched in a separate terminal_
+
+```
+export VAULT_ADDR='http://127.0.0.1:8200'
+vault status
+```
+
+## Steps to validate POC
+
+ - [ ] Acitvate OIDC authentication method
+ - [ ] Create two Users with personal secret store space
+ - [ ] Edit a policy to grant access to another user to personal space
+ - [ ] Validate the listing of user actions and secrets 
 
 WIP...
