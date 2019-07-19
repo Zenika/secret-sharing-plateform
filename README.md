@@ -39,18 +39,17 @@ vault policy write manager manager.hcl
 vault policy write reader reader.hcl
 vault policy list
 ```
+Run the `enable-oidc.sh` script to enable auth and create role, it will ask for Auth0 domain, id and secret.
 
-You need to add environment variables for Auth0 authentication:
+_You can find id and secret on the Auth0 dashboard in secret-sharing-plateform-POC app or ask Dreamlab_
+
+You can add the env variables manually by executing the following commands:
 
 ```
 export AUTH0_DOMAIN=zenika.eu.auth0.com
 export AUTH0_CLIENT_ID=<insert client id>
 export AUTH0_CLIENT_SECRET=<insert client secret>
 ```
-
-_You can find id and secret on the Auth0 dashboard in secret-sharing-plateform-POC app or ask Dreamlab_
-
-Run the `enable-oidc.sh` script to enable auth and create role.
 
 The server should accept your request for authentication via oicd method via CLI or UI
 

@@ -1,11 +1,14 @@
 #! /bin/bash
+read -p "Enter Auth0 domain (default: zenika.eu.auth0.com): " AUTH0_DOMAIN
+read -p "Enter Auth0 client id: " AUTH0_CLIENT_ID
+read -p "Enter Auth0 client secret: " AUTH0_CLIENT_SECRET
 
 # Enable oidc authentication
 vault auth enable oidc
 
 # Configure oidc auth method
 vault write auth/oidc/config \
-        oidc_discovery_url="https://$AUTH0_DOMAIN/" \
+        oidc_discovery_url="https://${AUTH0_DOMAIN:=zenika.eu.auth0.com}/" \
         oidc_client_id="$AUTH0_CLIENT_ID" \
         oidc_client_secret="$AUTH0_CLIENT_SECRET" \
         default_role="reader"
