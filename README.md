@@ -61,8 +61,8 @@ or visit http://localhost:8200/ and chose OIDC in Method dropdown menu
 
 ## Steps to validate POC
 
- - [X] Acitvate OIDC authentication method
- - [ ] Create two Users with personal secret store space
+ - [X] Activate OIDC authentication method - see above
+ - [X] Create two Users with personal secret store space - see #1
  - [ ] Edit a policy to grant access to another user to personal space
  - [ ] Validate the listing of user actions and secrets 
 
