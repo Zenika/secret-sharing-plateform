@@ -59,6 +59,18 @@ vault login -method=oidc
 
 or visit http://localhost:8200/ and chose OIDC in Method dropdown menu
 
+### Run the server with a storage backend
+
+Alternatively to the dev server (that doesn't save any config or data), you can run the server with a storage backend. The default config provided in `config.hcl`  sets it to a file in the current directory.
+There's a few steps you need to follow in order to be able to use the server:
+ - run the `vault server -config config.hcl` in a separate terminal to start it
+ - run the `vault operator init` to initialize the vault
+ - it provides you with keys and a root token, store them in a `unseal_keys` file, in order to log again and unseal after restart
+ - run the oidc procedure as described above
+ - you can now log with this method or with the root token for admin operations
+ - on restart, you need to run the `vault operator unseal` 3 times with diffferent keys to be able to interact with vault
+
+
 ## Steps to validate POC
 
  - [X] Activate OIDC authentication method - see above
