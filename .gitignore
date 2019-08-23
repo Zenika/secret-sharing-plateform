@@ -8,3 +8,7 @@
 # For dev only, keys are stocked here
 
 unseal_keys
+
+# remove storage
+
+vault/*
