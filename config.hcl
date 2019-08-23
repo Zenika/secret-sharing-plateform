@@ -1,5 +1,5 @@
 storage "file" {
-    path = "$HOME/Documents/Temp/vault/data"
+    path = "./vault/data"
 }
 
 listener "tcp" {

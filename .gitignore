@@ -4,3 +4,7 @@
 !.vscode/tasks.json
 !.vscode/launch.json
 .idea/
+
+# For dev only, keys are stocked here
+
+unseal_keys
