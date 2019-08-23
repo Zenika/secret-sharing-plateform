@@ -1,6 +1,10 @@
 # Grant all permissions on secret
-path "secret/*" {
-  capabilities = ["create", "read", "update", "delete", "list"]
+#path "secret/+/*" {
+#  capabilities = ["create", "read", "update", "delete", "list"]
+#}
+#
+path "identity/*" {
+  capabilities = ["list", "read"]
 }
 
 path "secret/data/{{identity.entity.id}}/*" {
